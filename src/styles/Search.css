@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    width: 50%;
+}
+
+form button {
+    background: none;
+    border: none;
+}
+.search-bar {
+    background-color: #FFF7EF;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    font-size: 13px;
+}
