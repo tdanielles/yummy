@@ -1,13 +1,14 @@
-import React from "react";
 import Search from "./Search";
 import Logo from "./Logo";
 import "../styles/Navbar.css";
 
-function Navbar() {
+function Navbar(props) {
+    const { getQuery } = props;
+
     return (
         <div className="navbar">
             <Logo/>
-            <Search/>
+            <Search getQuery={getQuery}/>
         </div>
         
     )
