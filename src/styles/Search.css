@@ -7,6 +7,16 @@ form button {
     background: none;
     border: none;
 }
+
+form button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+form button:active {
+    transform: scale(0.9);
+}
+
 .search-bar {
     background-color: #FFF7EF;
     border: none;

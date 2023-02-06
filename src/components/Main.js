@@ -1,6 +1,7 @@
 import "../styles/Main.css";
 import Carousel from "react-grid-carousel";
 import { useState, useEffect } from "react";
+import Card from "./Card";
 
 function Main(props) {
     const { query } = props;
@@ -33,8 +34,9 @@ function Main(props) {
                     showDots
                 >
                     {results.map((element, i) => (
-                        <Carousel.Item key={i}>
-                            <img className="main-item" width="100%" src={element.image_url} alt="image"/>
+                        <Carousel.Item key={element.recipe_id}>
+                            <Card id={element.recipe_id} title={element.title} imgUrl={element.image_url}/>
+                            {/*<img className="main-item" width="100%" src={element.image_url} alt="image"/>*/}
                         </Carousel.Item>
                     ))}
                 </Carousel>
