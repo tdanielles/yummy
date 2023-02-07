@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 
 function Main(props) {
-    const { query } = props;
+    const { query, getInfoStatus, getId } = props;
 
     const [results, setResults] = useState([]);
 
@@ -33,10 +33,9 @@ function Main(props) {
                     mobileBreakpoint = {670}
                     showDots
                 >
-                    {results.map((element, i) => (
+                    {results.map((element) => (
                         <Carousel.Item key={element.recipe_id}>
-                            <Card id={element.recipe_id} title={element.title} imgUrl={element.image_url}/>
-                            {/*<img className="main-item" width="100%" src={element.image_url} alt="image"/>*/}
+                            <Card id={element.recipe_id} title={element.title} imgUrl={element.image_url} getInfoStatus={getInfoStatus} getId={getId}/>
                         </Carousel.Item>
                     ))}
                 </Carousel>

@@ -1,3 +1,11 @@
 *, body {
     font-family: "Baloo 2";
 }
+
+.info-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
