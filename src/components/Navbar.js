@@ -10,7 +10,6 @@ function Navbar(props) {
             <Logo/>
             <Search getQuery={getQuery}/>
         </div>
-        
     )
 }
 

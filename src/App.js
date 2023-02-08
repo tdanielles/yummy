@@ -4,6 +4,8 @@ import Main from "./components/Main";
 import Info from "./components/Info"
 import "./styles/App.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 function App() {
@@ -30,12 +32,14 @@ function App() {
   }
 
   return (
-    <div className="App" onClick={handleClick}>
+    <div className="App">
       <Navbar getQuery={getQuery}/>
       <Main query={query} getInfoStatus={getInfoStatus} getId={getId}/>
       <div className="info-card">
         {showInfo && <Info id={id}/>}
       </div>
+      {showInfo && <div className="overlay" onClick={handleClick}></div>}
+      <footer>Copyright © 2023 tdanielles <a target="_blank" href="https://github.com/tdanielles"><FontAwesomeIcon className="link" icon={faGithub} /></a></footer>
     </div>
   );
 }

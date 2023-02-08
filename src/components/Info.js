@@ -6,14 +6,9 @@ import { faArrowUpRightFromSquare, faUser } from "@fortawesome/free-solid-svg-ic
 
 function Info(props) {
     const { id } = props;
-
     const [info, setInfo] = useState({});
     const [time, setTime] = useState(0);
     const [ingredients, setIngredients] = useState([]);
-
-    const parseIngredients = (ingredients) => {
-
-    }
 
     useEffect(() => {
         const fetchData = async() => {
@@ -70,4 +65,5 @@ function Info(props) {
         </div>
     )
 }
+
 export default Info;

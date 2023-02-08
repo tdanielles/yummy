@@ -4,7 +4,6 @@ import { useState } from "react";
 
 function Search(props) {
     const { getQuery } = props;
-    
     const [query, setQuery] = useState("");
 
     const handleSubmit = (e) => {

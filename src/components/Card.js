@@ -1,7 +1,5 @@
 import "../styles/Card.css";
 
-
-
 function Card(props) {
     const { id, title, imgUrl, getInfoStatus, getId} = props;
 
@@ -17,8 +15,7 @@ function Card(props) {
                 <img className="main-item" width="100%" src={imgUrl} alt="image"/>
                 <p className="centered">{title}</p>
             </div>
-        </div>
-            
+        </div>    
     )
 }
 

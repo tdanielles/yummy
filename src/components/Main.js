@@ -7,7 +7,6 @@ function Main(props) {
     const { query, getInfoStatus, getId } = props;
 
     const [results, setResults] = useState([]);
-
     useEffect(() => {
         const fetchData = async() => {
             try {
@@ -48,7 +47,6 @@ function Main(props) {
             </div>
         )
     }
-    
 }
 
 export default Main;

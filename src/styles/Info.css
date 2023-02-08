@@ -1,6 +1,6 @@
 .info {
     width: 600px;
-    height: 700px;
+    height: auto;
     background-color: white;
     z-index: 5;
     border-radius: 20px;
@@ -25,16 +25,15 @@
     color: white;
     font-size: 25px;
     font-weight: bolder;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: -40px;
 }
 
 .desc {
     display: flex;
     justify-content: space-between;
     width: 85%;
+    margin-top: -30px;
 }
 
 .desc-right {
@@ -45,7 +44,6 @@
 .desc-sub {
     display: flex;
     align-items: center;
-    margin-top: 40px;
     gap: 5px;
 }
 
@@ -76,8 +74,8 @@ p {
 }
 
 .ing-title {
-    font-weight: 500; /* :( */
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .dir-btn {
@@ -92,14 +90,12 @@ p {
 }
 
 .directions {
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 20px;
 }
 
 .directions:hover {
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: scale(1.05);
     transition: 0.3s ease;
     cursor: pointer;
 }
@@ -110,22 +106,18 @@ p {
 
 .ing-container .icon {
     color: #E81514;
-    transform: scale(0.5);
+    transform: scale(0.4);
 }
 
 .ing-each {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 ul {
     columns: 3;
     -webkit-columns: 3;
     -moz-columns: 3;
-    margin: 10px 0px;
-}
-
-li {
-    margin: 0px;
+    margin: 12px 0px;
 }
