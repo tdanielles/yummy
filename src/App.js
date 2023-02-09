@@ -12,6 +12,9 @@ function App() {
   const [query, setQuery] = useState("pizza");
   const [showInfo, toggleInfo] = useState(false);
   const [id, setId] = useState("47746");
+  const [liked, setLiked] = useState([]);
+
+  // add function onload, setliked equal to likes stored
 
   const getQuery = (data) => {
     setQuery(data);
@@ -33,10 +36,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar getQuery={getQuery}/>
+      <Navbar getQuery={getQuery} liked={liked} getInfoStatus={getInfoStatus} getId = {getId}/>
       <Main query={query} getInfoStatus={getInfoStatus} getId={getId}/>
       <div className="info-card">
-        {showInfo && <Info id={id}/>}
+        {showInfo && <Info liked={liked} setLiked = {setLiked} id={id}/>}
       </div>
       <footer>Copyright © 2023 tdanielles <a target="_blank" href="https://github.com/tdanielles"><FontAwesomeIcon className="link" icon={faGithub} /></a></footer>
       {showInfo && <div className="overlay" onClick={handleClick}></div>}
