@@ -9,6 +9,9 @@ function Navbar(props) {
         <div className="navbar">
             <Logo/>
             <Search getQuery={getQuery}/>
+            <div className="liked-recipes">
+                <button className="like-btn">Liked recipes</button>
+            </div>
         </div>
     )
 }

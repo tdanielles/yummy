@@ -38,8 +38,8 @@ function App() {
       <div className="info-card">
         {showInfo && <Info id={id}/>}
       </div>
-      {showInfo && <div className="overlay" onClick={handleClick}></div>}
       <footer>Copyright © 2023 tdanielles <a target="_blank" href="https://github.com/tdanielles"><FontAwesomeIcon className="link" icon={faGithub} /></a></footer>
+      {showInfo && <div className="overlay" onClick={handleClick}></div>}
     </div>
   );
 }

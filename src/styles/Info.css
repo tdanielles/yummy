@@ -1,7 +1,7 @@
 .info {
     width: 600px;
     height: auto;
-    background-color: white;
+    background-color: #FFF7EF;
     z-index: 5;
     border-radius: 20px;
     display: flex;
@@ -58,6 +58,7 @@
 .like:hover {
     transform: scale(1.7);
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .like:active {

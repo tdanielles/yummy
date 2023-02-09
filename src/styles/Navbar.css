@@ -7,4 +7,23 @@
     display: flex;
     justify-content: space-between;
     margin: 30px;
+    align-items: center;
+}
+
+.like-btn {
+    background-color: #E81514;
+    border: 2px solid #FFF7EF;
+    color: #FFF7EF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.like-btn:hover {
+    cursor: pointer;
+    background-color: #FFF7EF;
+    color: #E81514;
+    transform: none !important;
+    transition: 0.3s ease;
 }

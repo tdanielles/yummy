@@ -13,6 +13,9 @@ form button:hover {
     cursor: pointer;
 }
 
+input[type=text] {
+    background-color: #FFF7EF;
+}
 form button:active {
     transform: scale(0.9);
     transition: 0.3s ease;
