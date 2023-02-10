@@ -5,7 +5,7 @@ import { faCircleCheck, faClock, faHeart } from "@fortawesome/free-regular-svg-i
 import { faArrowUpRightFromSquare, faUser, faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 
 function Info(props) {
-    const { liked, setLiked, id } = props;
+    const { saveToLocalStorage, liked, setLiked, id } = props;
     const [info, setInfo] = useState({});
     const [time, setTime] = useState(0);
     const [ingredients, setIngredients] = useState([]);
@@ -34,13 +34,14 @@ function Info(props) {
 
     const handleLike = (e) => {
         if (isLiked) {
-            liked = setLiked(liked.filter(element => element.id != id));
             toggleLiked(false);
+            liked = setLiked(liked.filter(element => element.id != id));
         } else {
+            toggleLiked(true);
             liked.push({"id": info.recipe_id,
                         "title": info.title});
-            toggleLiked(true);
         }
+        saveToLocalStorage();
     }
 
     return (
