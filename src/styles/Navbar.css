@@ -61,3 +61,29 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.log-btn {
+    background-color: #E81514;
+    border: 2px solid #FFF7EF;
+    color: #FFF7EF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.log-btn:hover {
+    cursor: pointer;
+    background-color: #FFF7EF;
+    color: #E81514;
+    transition: 0.3s ease;
+}
+
+.log-btn:active {
+    transform: scale(0.9);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}

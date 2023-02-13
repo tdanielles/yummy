@@ -5,7 +5,7 @@ import { faCircleCheck, faClock, faHeart } from "@fortawesome/free-regular-svg-i
 import { faArrowUpRightFromSquare, faUser, faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 
 function Info(props) {
-    const { saveToLocalStorage, liked, setLiked, id } = props;
+    const { loggedIn, addToFireStore, removeFromFireStore, saveToLocalStorage, liked, setLiked, id } = props;
     const [info, setInfo] = useState({});
     const [time, setTime] = useState(0);
     const [ingredients, setIngredients] = useState([]);
@@ -33,15 +33,28 @@ function Info(props) {
     }, [])
 
     const handleLike = (e) => {
-        if (isLiked) {
-            toggleLiked(false);
-            liked = setLiked(liked.filter(element => element.id != id));
+        if (loggedIn) {
+            if (isLiked) {
+                toggleLiked(false);
+                removeFromFireStore(info.recipe_id, info.title);
+                setLiked(liked.filter(element => element.id != id));
+            } else {
+                toggleLiked(true);
+                liked.push({"id": info.recipe_id,
+                            "title": info.title});
+                addToFireStore(info.recipe_id, info.title);
+            }
         } else {
-            toggleLiked(true);
-            liked.push({"id": info.recipe_id,
-                        "title": info.title});
+            if (isLiked) {
+                toggleLiked(false);
+                setLiked(liked.filter(element => element.id != id));
+            } else {
+                toggleLiked(true);
+                liked.push({"id": info.recipe_id,
+                            "title": info.title});
+            }
+            saveToLocalStorage();
         }
-        saveToLocalStorage();
     }
 
     return (
