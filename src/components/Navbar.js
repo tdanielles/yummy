@@ -3,6 +3,8 @@ import { GoogleAuthProvider, signInWithPopup, signOut } from "@firebase/auth";
 import Search from "./Search";
 import Logo from "./Logo";
 import "../styles/Navbar.css";
+import { faGithub, faGratipay } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar(props) {
     const { getQuery, liked, getInfoStatus, getId, loggedIn, toggleLog, getFromFireStore, getFromLocalStorage } = props;
@@ -41,7 +43,8 @@ function Navbar(props) {
             <Search getQuery={getQuery}/>
             <div className="buttons">
                 <div className="dropdown">
-                    <button className="like-btn">Liked recipes</button>
+                    <FontAwesomeIcon className="icon" icon={faGratipay}/>
+                    <button className="like-btn liked">Liked recipes</button>
                     <div className="dropdown-content">
                         {liked.map(({id, title}) => (
                             <p onClick={handleClick}>{title}</p>
@@ -52,7 +55,8 @@ function Navbar(props) {
                     <button onClick={signIn} className="log-btn">Log in</button>
                 </div>}
                 {loggedIn && <div className="log-out dropdown">
-                    <button className="like-btn">Hi, {auth.currentUser.displayName.split(' ')[0]}!</button>
+                    <button className="like-btn desktop">Hi, {auth.currentUser.displayName.split(' ')[0]}!</button>
+                    <button className="log-btn mobile">Hi!</button>
                     <div className="dropdown-content">
                         <p onClick={signOutUser}>Log out</p>
                     </div>

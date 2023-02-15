@@ -20,6 +20,10 @@
     font-size: 15px;
 }
 
+.dropdown .icon {
+    display: none;
+}
+
 .dropdown:hover .like-btn {
     cursor: pointer;
     background-color: #FFF7EF;
@@ -83,7 +87,37 @@
     transform: scale(0.9);
 }
 
+.log-out .mobile {
+    display: none;
+}
+
 .buttons {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
+
+@media only screen and (max-width: 670px) {
+    .dropdown .liked {
+        display: none;
+    }
+    .dropdown .icon {
+        display: flex;
+        justify-content: center;
+        color: #FFF7EF;
+    }
+    .log-btn{
+        padding: 10px 10px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+    .buttons {
+        gap:10px;
+    }
+    .log-out .desktop {
+        display: none;
+    }
+    .log-out .mobile {
+        display: block;
+    }
+  }

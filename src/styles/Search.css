@@ -6,6 +6,8 @@ form {
 form button {
     background: none;
     border: none;
+    display: flex;
+    align-items: center;
 }
 
 form button:hover {
@@ -16,6 +18,7 @@ form button:hover {
 input[type=text] {
     background-color: #FFF7EF;
 }
+
 form button:active {
     transform: scale(0.9);
     transition: 0.3s ease;

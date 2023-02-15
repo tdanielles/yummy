@@ -28,8 +28,9 @@ function Main(props) {
                 <Carousel 
                     cols={4} rows={2} gap={20} 
                     responsiveLayout={[{breakpoint: 1200, cols: 3, rows: 2}, 
-                                       {breakpoint: 990, cols: 2, rows: 2}]}
-                    mobileBreakpoint = {670}
+                                       {breakpoint: 990, cols: 2, rows: 2},
+                                       {breakpoint: 670, cols: 1, rows: 2}]}
+                    mobileBreakpoint={0}
                     showDots
                 >
                     {results.map((element) => (

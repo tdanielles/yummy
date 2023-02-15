@@ -8,3 +8,9 @@
     font-weight: bolder;
     color: #FFF7EF;
 }
+
+@media only screen and (max-width: 990px) {
+    .title {
+        display: none;
+    }
+  }
