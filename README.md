@@ -3,8 +3,6 @@
 
 <b>Built with</b>: React, localStorage, Firebase (Cloud Firestore, Authentication, and Hosting)
 
-Mobile responsiveness coming soon!
-
 ## Inspiration
 As I'm moving to Seattle this summer for my first internship, I decided to make this app so I can easily look up recipes for food I want to cook.
 
